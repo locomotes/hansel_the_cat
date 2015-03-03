@@ -19,6 +19,12 @@ var App = React.createClass({
               </svg>
             </a>
           </div>
+          <div className="menu-link">
+            <span>M</span>
+            <span>E</span>
+            <span>O</span>
+            <span>W</span>
+          </div>
         </div>
         <div className="menu-container">
         </div>

@@ -6,6 +6,14 @@
   border: 1px solid white;
 }
 
+@mixin orangeborder {
+  border: 6px solid $orange;
+}
+
+@mixin greenborder {
+  border: 6px solid $green;
+}
+
 // @mixin outer-container {
 //   @include clearfix;
 //   max-width: 1040px;
@@ -29,12 +37,13 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
   .text {
     padding: 20px;
     width: 360px;
-    border: 6px solid $orange;
+    @include orangeborder;
     color: $orange;
-    font-family: 'Montserrat', sans-serif;
     font-size: 34px;
     font-weight: bold;
     margin-top: 5%;
@@ -49,7 +58,7 @@ body {
       display: none;
     }
     &:hover {
-      border: 6px solid $green;
+      @include greenborder;
       color: $green;
       .hot {
         display: block;
@@ -57,7 +66,7 @@ body {
     }
   }
   .icon {
-    border: 6px solid $orange;
+    @include orangeborder;
     width: 70px;
     height: 70px;
     margin-left: 5%;
@@ -68,11 +77,29 @@ body {
       }
     }
     &:hover {
-      border: 6px solid $green;
+      @include greenborder;
       a {
         .instagram {
           fill: $green;
         }
+      }
+    }
+  }
+  .menu-link {
+    @include orangeborder;
+    padding: 3px 0;
+    margin-left: 5%;
+    margin-top: 4%;
+    width: 35px;
+    text-align: center;
+    span {
+      color: $orange;
+      display: block;
+    }
+    &:hover {
+      @include greenborder;
+      span {
+        color: $green;
       }
     }
   }
@@ -82,4 +109,5 @@ body {
   @include span-columns(12 of 12);
   height: 10vh;
   background: $orange;
+
 }
