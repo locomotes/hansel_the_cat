@@ -21,6 +21,8 @@
 
 $orange: #E96B56;
 $green: #3EE8AA;
+$black: #323A3D;
+$blue: #73D3FC;
 
 body {
     background: white;
@@ -31,7 +33,7 @@ body {
 
 .hero-container {
   @include span-columns(12 of 12);
-  height: 90vh;
+  // height: 95vh;
   background: url("http://photos-f.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10958148_635645619869653_1601705527_n.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -107,7 +109,21 @@ body {
 
 .menu-container {
   @include span-columns(12 of 12);
-  height: 10vh;
-  background: $orange;
-
+  // height: 5vh;
+  background: $green;
+  text-align: right;
+  padding-top: 12px;
+  span {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5%;
+  }
+  span:first-of-type {
+    color: $orange;
+    margin-right: 20px;
+  }
+  span:last-of-type {
+    margin-right: 5%;
+    color: $black;
+  }
 }
