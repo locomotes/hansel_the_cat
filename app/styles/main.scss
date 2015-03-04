@@ -6,6 +6,14 @@
   border: 1px solid white;
 }
 
+@mixin orangeborder {
+  border: 6px solid $orange;
+}
+
+@mixin greenborder {
+  border: 6px solid $green;
+}
+
 // @mixin outer-container {
 //   @include clearfix;
 //   max-width: 1040px;
@@ -13,6 +21,8 @@
 
 $orange: #E96B56;
 $green: #3EE8AA;
+$black: #323A3D;
+$blue: #73D3FC;
 
 body {
     background: white;
@@ -21,20 +31,21 @@ body {
     margin: 0;
 }
 
-.hero-unit {
+.hero-container {
   @include span-columns(12 of 12);
-  height: 90vh;
+  // height: 95vh;
   background: url("http://photos-f.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10958148_635645619869653_1601705527_n.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
   .text {
     padding: 20px;
     width: 360px;
-    border: 6px solid $orange;
+    @include orangeborder;
     color: $orange;
-    font-family: 'Montserrat', sans-serif;
     font-size: 34px;
     font-weight: bold;
     margin-top: 5%;
@@ -49,7 +60,7 @@ body {
       display: none;
     }
     &:hover {
-      border: 6px solid $green;
+      @include greenborder;
       color: $green;
       .hot {
         display: block;
@@ -57,7 +68,7 @@ body {
     }
   }
   .icon {
-    border: 6px solid $orange;
+    @include orangeborder;
     width: 70px;
     height: 70px;
     margin-left: 5%;
@@ -68,7 +79,7 @@ body {
       }
     }
     &:hover {
-      border: 6px solid $green;
+      @include greenborder;
       a {
         .instagram {
           fill: $green;
@@ -76,10 +87,43 @@ body {
       }
     }
   }
+  .menu-link {
+    @include orangeborder;
+    padding: 3px 0;
+    margin-left: 5%;
+    margin-top: 4%;
+    width: 35px;
+    text-align: center;
+    span {
+      color: $orange;
+      display: block;
+    }
+    &:hover {
+      @include greenborder;
+      span {
+        color: $green;
+      }
+    }
+  }
 }
 
 .menu-container {
   @include span-columns(12 of 12);
-  height: 10vh;
-  background: $orange;
+  // height: 5vh;
+  background: $green;
+  text-align: right;
+  padding-top: 12px;
+  span {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5%;
+  }
+  span:first-of-type {
+    color: $orange;
+    margin-right: 20px;
+  }
+  span:last-of-type {
+    margin-right: 5%;
+    color: $black;
+  }
 }
